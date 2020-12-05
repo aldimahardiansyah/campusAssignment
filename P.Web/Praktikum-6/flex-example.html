@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        footer,
+        .main,
+        .sidebar {
+            background-color: #f5f5f5;
+            padding: 1em;
+            font-size: 1.5em;
+            text-align: center;
+            margin: 1em;
+        }
+
+        .container {
+            display: flex;
+            height: 70ex;
+        }
+
+        .main {
+            flex-basis: 70%;
+        }
+
+        .sidebar {
+            flex-basis: 30%;
+        }
+
+        body {
+            background-color: #0000ff;
+        }
+
+        @media screen and (max-width: 576px) {
+            body {
+                background-color: #ff0000;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>Header Website</header>
+    <div class="container">
+        <div class="main">Main Content</div>
+        <div class="sidebar">Sidebar</div>
+    </div>
+    <footer>Footer Website</footer>
+</body>
+
+</html>

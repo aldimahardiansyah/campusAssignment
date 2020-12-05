@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Counter</title>
+</head>
+
+<body>
+    <h1>Aplikasi Counter - JavaScript</h1>
+    <p class="result">0</p>
+    <button class="add" onclick="addAngka()">+</button>
+    <button class="min" onclick="minAngka()">-</button>
+
+    <script>
+        var result = document.querySelector(".result");
+        var add = document.querySelector(".add");
+        var min = document.querySelector(".min")
+
+        function addAngka() {
+            result.innerHTML = parseInt(result.innerHTML) + 1;
+        }
+        function minAngka() {
+            result.innerHTML = parseInt(result.innerHTML) - 1;
+        }
+    </script>
+</body>
+
+</html>

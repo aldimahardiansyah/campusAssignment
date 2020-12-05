@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT APPLICATION</title>
+    <style>
+        p {
+            height: 200px;
+            width: 250px;
+            padding: 0;
+        }
+
+        #chat,
+        button {
+            width: 100%;
+            margin: 0;
+        }
+
+        table {
+            border: 1px solid #000;
+            width: 30%;
+            object-position: bottom;
+            position: fixed;
+            bottom: 3px;
+            right: 10px;
+            background-color: #c2c7c5;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <p class="hasil"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="chat" onchange="input()" />
+            </td>
+            <td>
+                <button onclick="kirim()">Kirim</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var hasil = document.querySelector(".hasil");
+        function input(confirm = 0) {
+            if (confirm != 0) {
+                return document.getElementById("chat").value = "";
+            }
+            else {
+                return document.getElementById("chat").value;
+            }
+        }
+        function kirim() {
+            hasil.innerHTML = hasil.innerHTML + input() + "<br />";
+            input(1)
+        }
+    </script>
+</body>
+
+</html>

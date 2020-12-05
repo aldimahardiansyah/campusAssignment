@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Siswa</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="20px">
+        <tr>
+            <td>
+                <h2>Student Registration Form</h2>
+                <form>
+                    <div align="right">
+                        <label>Date</label>
+                        <input type="date" value="2020-10-10" />
+                    </div>
+
+                    <fieldset>
+                        <legend>Personal information</legend>
+                        <table>
+                            <tr>
+                                <td>Name</td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth</td>
+                                <td><input type="date" value="2002-10-01" /></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <table>
+                            <tr>
+                                <td>Address</td>
+                                <td colspan="3"><input type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td>City</td>
+                                <td><input type="text" /></td>
+                                <td>Province/State</td>
+                                <td><input type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td>ZIP Code</td>
+                                <td><input type="number" /></td>
+                                <td>Country</td>
+                                <td><input type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td><input type="number" /></td>
+                                <td>E-Mail</td>
+                                <td><input type="email" /></td>
+                            </tr>
+                            <tr>
+                                <td>Membership Type</td>
+                                <td colspan="2">
+                                    <input type="radio" name="membership" />Regular
+                                    <input type="radio" name="membership" />Premium
+                                    <input type="radio" name="membership" />VIP
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend>Course Information</legend>
+                        <table>
+                            <tr>
+                                <td>Course Name</td>
+                                <td><input type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td>Payment Details</td>
+                                <td>
+                                    <input type="radio" name="payment" />Cash
+                                    <input type="radio" name="payment" />Cheque
+                                    <input type="radio" name="payment" />Credit Card
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <div align="right">
+                        <label>Validated By</label>
+                        <input type="date">
+                    </div>
+                </form>
+                <br />
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
