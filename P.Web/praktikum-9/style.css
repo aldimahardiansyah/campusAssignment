@@ -1,0 +1,38 @@
+.contain{
+    background: rebeccapurple;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    animation-name: animasi;
+    animation-duration: 2s;
+}
+h2{
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: bounce;
+    animation-duration: 2s;
+}
+
+@keyframes animasi{
+    /* 0%{background-color: red; left: 250px; top: 0;}
+    50%{background-color: salmon; left: 100px; top: 300px;}
+    100%{background-color: sienna; left: 1px; top: 1px;} */
+
+    0%{background: chocolate; left: 200px; top: 0;}
+    25%{background: coral; left: 150px; top: 150px;}
+    50%{background: darkgoldenrod; left: 100px; top: 100px;}
+    75%{background: darkkhaki; left: 25px; top: 25px;}
+    100%{background: darkorange; left: 1px; top: 1px;}
+}
+
+@keyframes animasi1{
+    /* 0%{background-color: red; left: 250px; top: 0;}
+    50%{background-color: salmon; left: 100px; top: 300px;}
+    100%{background-color: sienna; left: 1px; top: 1px;} */
+
+    100%{background: chocolate; left: 200px; top: 0;}
+    75%{background: coral; left: 150px; top: 150px;}
+    50%{background: darkgoldenrod; left: 100px; top: 100px;}
+    25%{background: darkkhaki; left: 25px; top: 25px;}
+    0%{background: darkorange; left: 1px; top: 1px;}
+}
