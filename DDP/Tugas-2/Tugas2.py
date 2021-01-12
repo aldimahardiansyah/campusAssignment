@@ -2,7 +2,7 @@ import random
 import string
 
 
-def buka_rekening():
+def buka_rekening():  # Mutia
     print("*** BUKA REKENING ***")
     norek = "REK" + ''.join(random.choice(string.digits) for _ in range(3))
     nama = input("Masukkan nama: ")
@@ -15,7 +15,7 @@ def buka_rekening():
     return menu()
 
 
-def setoran_tunai():
+def setoran_tunai():  # Wahyu
     print("\n*** SETORAN TUNAI ***")
     rek_setor = input("Masukkan nomor rekening: ").upper()
     nominal_setor = eval(input("Masukkan nominal yang akan disetor: "))
@@ -51,7 +51,7 @@ def upload(l):
     menu()
 
 
-def tarik_tunai():
+def tarik_tunai():  # Mufti
     print("\n*** TARIK TUNAI ***")
     rek_tarik = input("Masukkan nomor rekening: ").upper()
     nominal_tarik = eval(input("Masukkan nominal yang akan ditarik: "))
@@ -80,7 +80,7 @@ def tarik_tunai():
     return f_nasabah
 
 
-def transfer():
+def transfer():  # Aldi
     print("\n*** TRANSFER ***")
     rek_sumber = input("Masukkan nomor rekening sumber: ").upper()
     rek_tujuan = input("Masukkan nomor rekening tujuan: ").upper()
@@ -141,8 +141,39 @@ def transfer():
         return f_nasabah
 
 
-def daftar_transfer():
-    pass
+def daftar_transfer():  # Fikri
+    print("\n*** LIHAT DAFTAR TRANSFER ***")
+    norek = input("Masukkan nomor rekening sumber transfer: ").upper()
+
+    f_nasabah = open('D:/_STTNF/Tugas/Code/DDP/Tugas-2/nasabah.txt')
+    kode = 0
+    for nasabah in f_nasabah:
+        if norek in nasabah:
+            kode = 1
+    f_nasabah.close()
+
+    if kode == 0:
+        print("Nomor rekening sumber tidak terdaftar. \n")
+        menu()
+    elif kode == 1:
+        f_transfer = open('D:/_STTNF/Tugas/Code/DDP/Tugas-2/transfer.txt')
+        cetak_teks = True
+        kosong = True
+        for transfer in f_transfer:
+            list_tf = transfer.strip().split(', ')
+            if norek in list_tf[1]:
+                if cetak_teks == True:
+                    print('Daftar transfer dari rekening', norek, ': ')
+                    cetak_teks = False
+                    kosong = False
+                print(list_tf[0], list_tf[1], list_tf[2], list_tf[3])
+        if kosong == True:
+            if cetak_teks == True:
+                print('Tidak ada data yang ditampilkan.')
+                cetak_teks = False
+        print('\n')
+        f_transfer.close()
+        menu()
 
 
 def keluar():
@@ -155,15 +186,15 @@ def input_menu():
 
 
 def pilihan(menu):
-    if menu == '1':
+    if menu == '1':  # Mutia
         return buka_rekening()
-    elif menu == '2':
+    elif menu == '2':  # Wahyu
         return upload(setoran_tunai())
-    elif menu == '3':
+    elif menu == '3':  # Mufti
         return upload(tarik_tunai())
-    elif menu == '4':
+    elif menu == '4':  # Aldi
         return upload(transfer())
-    elif menu == '5':
+    elif menu == '5':  # Fikri
         return daftar_transfer()
     elif menu == '6':
         return keluar()
